@@ -40,15 +40,13 @@
 
 由于手机端使用WiFi代理设置会让流量全部走代理，如果部署在远端服务器对网络会造成一定影响，所以建议使用PAC代理的方式只代理明日方舟域名。
 
-ak-gs-localhost.hypergryph.com 国服
-
-gs.arknights.jp 日服
+ak-gs-gf.hypergryph.com 国服
 
 其他服没玩，可以自己抓包看一下
 
 ```
 function FindProxyForURL(url, host) {
-if (dnsDomainIs(host, "ak-gs-localhost.hypergryph.com") || dnsDomainIs(host, "gs.arknights.jp")) {
+if (dnsDomainIs(host, "ak-gs-gf.hypergryph.com")) {
   return "PROXY 192.168.1.1:12450";
 }
   return "DIRECT";
