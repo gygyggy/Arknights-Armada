@@ -13,8 +13,7 @@ customChar = {
 }
 
 Debug = True
-Servers = ["ak-gs.hypergryph.com", "gs.arknights.jp", "ak-gs-localhost.hypergryph.com",
-           "ak-as-localhost.hypergryph.com"]
+Servers = ["ak-gs-gf.hypergryph.com"]
 
 
 class Armada:
@@ -28,12 +27,6 @@ class Armada:
         print(flow.request.host)
         if flow.request.host not in Servers and False is Debug:
             flow.response = http.HTTPResponse.make(404)
-        if flow.request.host == "ak-gs-localhost.hypergryph.com":
-            flow.request.host = "ak-gs.hypergryph.com"
-            flow.request.port = 8443
-        elif flow.request.host == "ak-as-localhost.hypergryph.com":
-            flow.request.host = "ak-as.hypergryph.com"
-            flow.request.port = 9443
 
     def request(self, flow):
         if flow.request.host in Servers and flow.request.path.startswith("/quest/battleStart"):
