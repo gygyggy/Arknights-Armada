@@ -67,6 +67,21 @@ class Armada:
             j['user']['status']['secretary'] = 'char_103_angel'
             j['user']['status']['secretarySkinId'] = "char_103_angel#2"
             print(len(j['user']['troop']['chars']))
+            
+            if len(j['user']['troop']['chars']) < 10:
+                print('干员数量不足。')
+            else:
+                for c in customChar:
+                    tmp_skills = []
+                    j['user']['troop']['chars'][c]['charId'] = customChar[c]
+                    for s in self.chars[customChar[c]]['skills']:
+                        tmp_skills.append({"skillId": s['skillId'],
+                                           "unlock": 1,
+                                           "state": 0,
+                                           "specializeLevel": 0,
+                                           "completeUpgradeTime": -1})
+                        j['user']['troop']['chars'][c]['skills'] = tmp_skills
+
 
             if allMight:
                 for lv in j['user']['troop']['chars']:
