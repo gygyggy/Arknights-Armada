@@ -9,7 +9,7 @@ import json
 allMight = True
 # 自定义黄金舰队干员
 customChar = {
-    # "5": "char_2014_nian"
+    "5": "char_2014_nian"
 }
 
 Debug = True
@@ -99,17 +99,17 @@ class Armada:
                         j['user']['troop']['chars'][lv]['level'] = 70
                         j['user']['troop']['chars'][lv]['evolvePhase'] = 2
                         j['user']['troop']['chars'][lv]['defaultSkillIndex'] = 1
-                        j['user']['troop']['chars'][lv]['skin'] = j['user']['troop']['chars'][lv]['charId'] + "#2"
+                        # j['user']['troop']['chars'][lv]['skin'] = j['user']['troop']['chars'][lv]['charId'] + "#2"
                     elif rarity == 4:
                         j['user']['troop']['chars'][lv]['level'] = 80
                         j['user']['troop']['chars'][lv]['evolvePhase'] = 2
                         j['user']['troop']['chars'][lv]['defaultSkillIndex'] = 1
-                        j['user']['troop']['chars'][lv]['skin'] = j['user']['troop']['chars'][lv]['charId'] + "#2"
+                        # j['user']['troop']['chars'][lv]['skin'] = j['user']['troop']['chars'][lv]['charId'] + "#2"
                     elif rarity == 5:
                         j['user']['troop']['chars'][lv]['level'] = 90
                         j['user']['troop']['chars'][lv]['evolvePhase'] = 2
                         j['user']['troop']['chars'][lv]['defaultSkillIndex'] = 2
-                        j['user']['troop']['chars'][lv]['skin'] = j['user']['troop']['chars'][lv]['charId'] + "#2"
+                        # j['user']['troop']['chars'][lv]['skin'] = j['user']['troop']['chars'][lv]['charId'] + "#2"
 
                     for e, skill in enumerate(j['user']['troop']['chars'][lv]['skills']):
                         j['user']['troop']['chars'][lv]['skills'][e]['unlock'] = 1
