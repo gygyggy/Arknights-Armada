@@ -64,10 +64,10 @@ class Armada:
             text = flow.response.get_text()
             j = json.loads(text)
             print('黄金舰队 ' + j['user']['status']['nickName'] + '#' + flow.request.headers['uid'] + ' 初始化...')
-            j['user']['status']['secretary'] = 'char_103_angel'
-            j['user']['status']['secretarySkinId'] = "char_103_angel#2"
+            # j['user']['status']['secretary'] = 'char_103_angel'
+            # j['user']['status']['secretarySkinId'] = "char_103_angel#2"
             print(len(j['user']['troop']['chars']))
-            
+
             if len(j['user']['troop']['chars']) < 10:
                 print('干员数量不足。')
             else:
